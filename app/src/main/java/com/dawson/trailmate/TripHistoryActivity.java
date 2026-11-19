@@ -55,15 +55,6 @@ public class TripHistoryActivity extends AppCompatActivity {
         tripAdapter = new TripAdapter();
         tripListView.setAdapter(tripAdapter);
 
-        tripListView.setOnItemClickListener(
-                (parent, view, position, id) ->
-                        showTripDetails(
-                                tripIds.get(position),
-                                tripNames.get(position),
-                                tripDetails.get(position)
-                        )
-        );
-
         loadTrips();
     }
 
@@ -435,24 +426,30 @@ public class TripHistoryActivity extends AppCompatActivity {
             summaryText.setTextSize(14f);
             summaryText.setPadding(0, dp(4), 0, dp(4));
 
+            long tripId = tripIds.get(position);
+            String tripName = tripNames.get(position);
+            String tripNote = tripNotes.get(position);
+            String details = tripDetails.get(position);
+
+            View.OnClickListener openDetails =
+                    view -> showTripDetails(tripId, tripName, details);
+
+            row.setOnClickListener(openDetails);
+            nameText.setOnClickListener(openDetails);
+            summaryText.setOnClickListener(openDetails);
+
             LinearLayout buttons = new LinearLayout(TripHistoryActivity.this);
             buttons.setOrientation(LinearLayout.HORIZONTAL);
             buttons.setGravity(Gravity.END);
 
             Button editButton = new Button(TripHistoryActivity.this);
             editButton.setText("Edit");
-
-            Button deleteButton = new Button(TripHistoryActivity.this);
-            deleteButton.setText("Delete");
-
-            long tripId = tripIds.get(position);
-            String tripName = tripNames.get(position);
-            String tripNote = tripNotes.get(position);
-
             editButton.setOnClickListener(
                     view -> showEditTripDialog(tripId, tripName, tripNote)
             );
 
+            Button deleteButton = new Button(TripHistoryActivity.this);
+            deleteButton.setText("Delete");
             deleteButton.setOnClickListener(
                     view -> showDeleteConfirmation(tripId, tripName)
             );
