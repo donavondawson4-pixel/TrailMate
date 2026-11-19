@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#24543B"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Choose how TrailMate displays distance."
+            android:textColor="#5D6D60"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Distance units"
+            android:textColor="#20372A"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/distanceUnitRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/unitMilesRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#24543B"
+                android:checked="true"
+                android:minHeight="52dp"
+                android:text="Miles (mi)"
+                android:textColor="#20372A"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/unitKilometersRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#24543B"
+                android:minHeight="52dp"
+                android:text="Kilometers (km)"
+                android:textColor="#20372A"
+                android:textSize="17sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/saveSettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#24543B"
+            android:minHeight="52dp"
+            android:text="Save settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:text="Back"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

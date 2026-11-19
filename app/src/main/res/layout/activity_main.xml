@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TrailMate"
+            android:textColor="#24543B"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Plan it. Track it. Remember it."
+            android:textColor="#5D6D60"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Your next hike starts here."
+            android:textColor="#20372A"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/locationStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E5EDDF"
+            android:padding="16dp"
+            android:text="Ready for your next trail."
+            android:textColor="#24543B"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tripNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Enter a hike name"
+            android:inputType="textCapSentences"
+            android:minHeight="56dp"
+            android:padding="12dp"
+            android:textColor="#20372A"
+            android:textColorHint="#718174" />
+
+        <EditText
+            android:id="@+id/tripNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="top"
+            android:hint="Trail notes (optional)"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="90dp"
+            android:padding="12dp"
+            android:textColor="#20372A"
+            android:textColorHint="#718174" />
+
+        <Button
+            android:id="@+id/startTripButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#24543B"
+            android:minHeight="54dp"
+            android:text="Start a hike"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/pauseTripButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:text="Pause hike"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:text="Trip history"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:text="Map"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:text="Settings"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tripStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="No hike is active."
+            android:textColor="#5D6D60"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

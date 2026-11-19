@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F0"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/historyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Hikes"
+        android:textColor="#24543B"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/historySubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Completed hikes are saved here."
+        android:textColor="#5D6D60"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/emptyHistoryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="No hikes saved yet. Finish a hike to see it here."
+        android:textColor="#5D6D60"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/tripListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice"
+        android:divider="#D8E1D5"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:minHeight="50dp"
+        android:text="Back"
+        android:textSize="16sp" />
+
+</LinearLayout>
